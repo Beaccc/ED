@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Pila Max: Fichero Fuente include/lista.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Pila Max
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('lista_8h_source.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">lista.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="lista_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef _LISTA_H_</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define _LISTA_H_</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structCelda.html">   22</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structCelda.html">Celda</a> {       </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structCelda.html#a4ae2327e3d2c3c426c5d5a71c59d9544">   23</a></span>&#160;      T <a class="code" href="structCelda.html#a4ae2327e3d2c3c426c5d5a71c59d9544">elem</a>;        </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structCelda.html#a21d45c0a09e1129e74971adcb8f96919">   24</a></span>&#160;      <a class="code" href="structCelda.html">Celda&lt;T&gt;</a> * <a class="code" href="structCelda.html#a21d45c0a09e1129e74971adcb8f96919">sig</a>; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      <a class="code" href="structCelda.html">Celda</a>() : sig(NULL) {};</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classLista.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="classLista.html">Lista</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classIterador.html">   46</a></span>&#160;<span class="keyword">class </span><a class="code" href="classIterador.html">Iterador</a> {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classIterador.html#ae36a86bb2f276dcad8c7c035270da05e">   48</a></span>&#160;    <a class="code" href="structCelda.html">Celda&lt;T&gt;</a> *<a class="code" href="classIterador.html#ae36a86bb2f276dcad8c7c035270da05e">ptr</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classIterador.html#a95667696efab8089c63826a5fe3d23bc">   54</a></span>&#160;    <a class="code" href="classIterador.html#a95667696efab8089c63826a5fe3d23bc">Iterador</a>(){</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        ptr = NULL;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classIterador.html#ae56e6d741bbfc1f2b3c5a236817f8ea4">   62</a></span>&#160;<a class="code" href="classIterador.html">Iterador&lt;T&gt;</a> &amp; <a class="code" href="classIterador.html#ae56e6d741bbfc1f2b3c5a236817f8ea4">operator++</a>() {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    ptr = ptr-&gt;<a class="code" href="structCelda.html#a21d45c0a09e1129e74971adcb8f96919">sig</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classIterador.html#afd183da1bd64550d19154248914b292f">   72</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classIterador.html#afd183da1bd64550d19154248914b292f">operator==</a>(<span class="keyword">const</span> <a class="code" href="classIterador.html">Iterador</a>&amp; p){ </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">return</span> ptr == p.<a class="code" href="classIterador.html#ae36a86bb2f276dcad8c7c035270da05e">ptr</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classIterador.html#a765732282cc0ba53b3833d4020e0193a">   81</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classIterador.html#a765732282cc0ba53b3833d4020e0193a">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classIterador.html">Iterador</a>&amp; p){ </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">return</span> ptr != p.<a class="code" href="classIterador.html#ae36a86bb2f276dcad8c7c035270da05e">ptr</a>; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classIterador.html#a2f4bc6b4cacfa8022ea835e22c1f7848">   89</a></span>&#160;    T&amp; <a class="code" href="classIterador.html#a2f4bc6b4cacfa8022ea835e22c1f7848">operator*</a>(){</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">return</span> ptr-&gt;<a class="code" href="structCelda.html#a4ae2327e3d2c3c426c5d5a71c59d9544">elem</a>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classLista.html">Lista</a>&lt;T&gt;;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;};</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keyword">class </span><a class="code" href="classLista.html">Lista</a>{</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="classLista.html#ac463786f33c9be952ab22ddd51a57509">  130</a></span>&#160;    <a class="code" href="structCelda.html">Celda&lt;T&gt;</a> * <a class="code" href="classLista.html#ac463786f33c9be952ab22ddd51a57509">_cab</a>; </div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="classLista.html#a02052371c5048b64a848a77dad25ac39">  131</a></span>&#160;    <a class="code" href="structCelda.html">Celda&lt;T&gt;</a> * <a class="code" href="classLista.html#a02052371c5048b64a848a77dad25ac39">_ultima</a>; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classLista.html#a6bba5ea57f62a207b2c38c4dc848abe3">Copiar</a>(<span class="keyword">const</span> <a class="code" href="classLista.html">Lista&lt;T&gt;</a> &amp; l);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <a class="code" href="classLista.html#adce924e21607848663132290be1a959d">Lista</a>();</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <a class="code" href="classLista.html#adce924e21607848663132290be1a959d">Lista</a>(<span class="keyword">const</span> <a class="code" href="classLista.html">Lista&lt;T&gt;</a> &amp; t);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <a class="code" href="classLista.html#af297975e278b0c92cbf67d14b2f08366">~Lista</a>();</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <a class="code" href="classIterador.html">Iterador&lt;T&gt;</a> <a class="code" href="classLista.html#a5329b45219eaf306b28c3ce7f309ac78">begin</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <a class="code" href="classIterador.html">Iterador&lt;T&gt;</a> <a class="code" href="classLista.html#aa651877ce5f8f1b2bf65087ae5adac0b">end</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    T <a class="code" href="classLista.html#a412b7776b838ef2e483a8f181a223786">front</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    T <a class="code" href="classLista.html#ae79d368b33629e334bc74c7c43fee8a3">back</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classLista.html#a34910e9ba1639fa6c8de40867858a095">Set</a>(<a class="code" href="classIterador.html">Iterador&lt;T&gt;</a> it, <span class="keyword">const</span> T &amp; t);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    T <a class="code" href="classLista.html#a5bf4fa385b4d0e6038d2dfcba5eea910">Get</a>(<a class="code" href="classIterador.html">Iterador&lt;T&gt;</a> it);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <a class="code" href="classIterador.html">Iterador&lt;T&gt;</a> <a class="code" href="classLista.html#aba7b172959d3d84e59d9f409678cd95a">Borrar</a>(<a class="code" href="classIterador.html">Iterador&lt;T&gt;</a> it);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <a class="code" href="classIterador.html">Iterador&lt;T&gt;</a> <a class="code" href="classLista.html#a46866fc0097ea39e58866fab241f4cc5">Insertar</a>(<a class="code" href="classIterador.html">Iterador&lt;T&gt;</a> it, <span class="keyword">const</span> T &amp; t);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classLista.html#a681ac2d3562a5362de6e18df0d229e9d">Vacia</a>();</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;};</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="lista_8cpp.html">lista.cpp</a>&quot;</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classIterador_html_afd183da1bd64550d19154248914b292f"><div class="ttname"><a href="classIterador.html#afd183da1bd64550d19154248914b292f">Iterador::operator==</a></div><div class="ttdeci">bool operator==(const Iterador &amp;p)</div><div class="ttdoc">Operador de comprobación si es igual. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8h_source.html#l00072">lista.h:72</a></div></div>
+<div class="ttc" id="lista_8cpp_html"><div class="ttname"><a href="lista_8cpp.html">lista.cpp</a></div><div class="ttdoc">Implementación de la clase Lista. </div></div>
+<div class="ttc" id="classIterador_html_ae36a86bb2f276dcad8c7c035270da05e"><div class="ttname"><a href="classIterador.html#ae36a86bb2f276dcad8c7c035270da05e">Iterador::ptr</a></div><div class="ttdeci">Celda&lt; T &gt; * ptr</div><div class="ttdef"><b>Definition:</b> <a href="lista_8h_source.html#l00048">lista.h:48</a></div></div>
+<div class="ttc" id="classLista_html_adce924e21607848663132290be1a959d"><div class="ttname"><a href="classLista.html#adce924e21607848663132290be1a959d">Lista::Lista</a></div><div class="ttdeci">Lista()</div><div class="ttdoc">Constructor por defecto. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8cpp_source.html#l00025">lista.cpp:25</a></div></div>
+<div class="ttc" id="classLista_html_a5329b45219eaf306b28c3ce7f309ac78"><div class="ttname"><a href="classLista.html#a5329b45219eaf306b28c3ce7f309ac78">Lista::begin</a></div><div class="ttdeci">Iterador&lt; T &gt; begin() const </div><div class="ttdoc">Devuelve un iterador a la primera posición. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8cpp_source.html#l00055">lista.cpp:55</a></div></div>
+<div class="ttc" id="classIterador_html_a2f4bc6b4cacfa8022ea835e22c1f7848"><div class="ttname"><a href="classIterador.html#a2f4bc6b4cacfa8022ea835e22c1f7848">Iterador::operator*</a></div><div class="ttdeci">T &amp; operator*()</div><div class="ttdoc">Operador *. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8h_source.html#l00089">lista.h:89</a></div></div>
+<div class="ttc" id="classIterador_html_a765732282cc0ba53b3833d4020e0193a"><div class="ttname"><a href="classIterador.html#a765732282cc0ba53b3833d4020e0193a">Iterador::operator!=</a></div><div class="ttdeci">bool operator!=(const Iterador &amp;p)</div><div class="ttdoc">Operador de comprobación distinto. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8h_source.html#l00081">lista.h:81</a></div></div>
+<div class="ttc" id="classIterador_html_ae56e6d741bbfc1f2b3c5a236817f8ea4"><div class="ttname"><a href="classIterador.html#ae56e6d741bbfc1f2b3c5a236817f8ea4">Iterador::operator++</a></div><div class="ttdeci">Iterador&lt; T &gt; &amp; operator++()</div><div class="ttdoc">Operador de incremento. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8h_source.html#l00062">lista.h:62</a></div></div>
+<div class="ttc" id="classLista_html_a681ac2d3562a5362de6e18df0d229e9d"><div class="ttname"><a href="classLista.html#a681ac2d3562a5362de6e18df0d229e9d">Lista::Vacia</a></div><div class="ttdeci">bool Vacia()</div><div class="ttdoc">Comprueba si la lista está vacía. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8cpp_source.html#l00077">lista.cpp:77</a></div></div>
+<div class="ttc" id="classLista_html_a46866fc0097ea39e58866fab241f4cc5"><div class="ttname"><a href="classLista.html#a46866fc0097ea39e58866fab241f4cc5">Lista::Insertar</a></div><div class="ttdeci">Iterador&lt; T &gt; Insertar(Iterador&lt; T &gt; it, const T &amp;t)</div><div class="ttdoc">Inserta un elemento en una posición. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8cpp_source.html#l00103">lista.cpp:103</a></div></div>
+<div class="ttc" id="classLista_html_aba7b172959d3d84e59d9f409678cd95a"><div class="ttname"><a href="classLista.html#aba7b172959d3d84e59d9f409678cd95a">Lista::Borrar</a></div><div class="ttdeci">Iterador&lt; T &gt; Borrar(Iterador&lt; T &gt; it)</div><div class="ttdoc">Elimina una posicion de la lista, celda incluida. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8cpp_source.html#l00093">lista.cpp:93</a></div></div>
+<div class="ttc" id="classIterador_html_a95667696efab8089c63826a5fe3d23bc"><div class="ttname"><a href="classIterador.html#a95667696efab8089c63826a5fe3d23bc">Iterador::Iterador</a></div><div class="ttdeci">Iterador()</div><div class="ttdoc">Constructor por defecto. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8h_source.html#l00054">lista.h:54</a></div></div>
+<div class="ttc" id="structCelda_html"><div class="ttname"><a href="structCelda.html">Celda</a></div><div class="ttdoc">Struct Celda struct que define el tipo de celdas utilizadas para la implementacion de la lista...</div><div class="ttdef"><b>Definition:</b> <a href="lista_8h_source.html#l00022">lista.h:22</a></div></div>
+<div class="ttc" id="classLista_html_aa651877ce5f8f1b2bf65087ae5adac0b"><div class="ttname"><a href="classLista.html#aa651877ce5f8f1b2bf65087ae5adac0b">Lista::end</a></div><div class="ttdeci">Iterador&lt; T &gt; end() const </div><div class="ttdoc">Devuelve un iterador a la última posición. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8cpp_source.html#l00061">lista.cpp:61</a></div></div>
+<div class="ttc" id="classLista_html"><div class="ttname"><a href="classLista.html">Lista</a></div><div class="ttdoc">T.D.A. Lista. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8h_source.html#l00030">lista.h:30</a></div></div>
+<div class="ttc" id="classLista_html_af297975e278b0c92cbf67d14b2f08366"><div class="ttname"><a href="classLista.html#af297975e278b0c92cbf67d14b2f08366">Lista::~Lista</a></div><div class="ttdeci">~Lista()</div><div class="ttdoc">Destructor de la clase. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8cpp_source.html#l00045">lista.cpp:45</a></div></div>
+<div class="ttc" id="classLista_html_a02052371c5048b64a848a77dad25ac39"><div class="ttname"><a href="classLista.html#a02052371c5048b64a848a77dad25ac39">Lista::_ultima</a></div><div class="ttdeci">Celda&lt; T &gt; * _ultima</div><div class="ttdef"><b>Definition:</b> <a href="lista_8h_source.html#l00131">lista.h:131</a></div></div>
+<div class="ttc" id="classIterador_html"><div class="ttname"><a href="classIterador.html">Iterador</a></div><div class="ttdoc">Clase Iterador. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8h_source.html#l00046">lista.h:46</a></div></div>
+<div class="ttc" id="classLista_html_a6bba5ea57f62a207b2c38c4dc848abe3"><div class="ttname"><a href="classLista.html#a6bba5ea57f62a207b2c38c4dc848abe3">Lista::Copiar</a></div><div class="ttdeci">void Copiar(const Lista&lt; T &gt; &amp;l)</div><div class="ttdoc">Copia en el objeto otra lista. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8cpp_source.html#l00010">lista.cpp:10</a></div></div>
+<div class="ttc" id="classLista_html_ac463786f33c9be952ab22ddd51a57509"><div class="ttname"><a href="classLista.html#ac463786f33c9be952ab22ddd51a57509">Lista::_cab</a></div><div class="ttdeci">Celda&lt; T &gt; * _cab</div><div class="ttdef"><b>Definition:</b> <a href="lista_8h_source.html#l00130">lista.h:130</a></div></div>
+<div class="ttc" id="structCelda_html_a21d45c0a09e1129e74971adcb8f96919"><div class="ttname"><a href="structCelda.html#a21d45c0a09e1129e74971adcb8f96919">Celda::sig</a></div><div class="ttdeci">Celda&lt; T &gt; * sig</div><div class="ttdef"><b>Definition:</b> <a href="lista_8h_source.html#l00024">lista.h:24</a></div></div>
+<div class="ttc" id="classLista_html_ae79d368b33629e334bc74c7c43fee8a3"><div class="ttname"><a href="classLista.html#ae79d368b33629e334bc74c7c43fee8a3">Lista::back</a></div><div class="ttdeci">T back() const </div><div class="ttdoc">Devuelve el elemento del final de la lista. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8cpp_source.html#l00072">lista.cpp:72</a></div></div>
+<div class="ttc" id="classLista_html_a412b7776b838ef2e483a8f181a223786"><div class="ttname"><a href="classLista.html#a412b7776b838ef2e483a8f181a223786">Lista::front</a></div><div class="ttdeci">T front() const </div><div class="ttdoc">Devuelve el elemento del principio de la lista. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8cpp_source.html#l00067">lista.cpp:67</a></div></div>
+<div class="ttc" id="classLista_html_a34910e9ba1639fa6c8de40867858a095"><div class="ttname"><a href="classLista.html#a34910e9ba1639fa6c8de40867858a095">Lista::Set</a></div><div class="ttdeci">void Set(Iterador&lt; T &gt; it, const T &amp;t)</div><div class="ttdoc">Modifica el elemento de una posición. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8cpp_source.html#l00083">lista.cpp:83</a></div></div>
+<div class="ttc" id="structCelda_html_a4ae2327e3d2c3c426c5d5a71c59d9544"><div class="ttname"><a href="structCelda.html#a4ae2327e3d2c3c426c5d5a71c59d9544">Celda::elem</a></div><div class="ttdeci">T elem</div><div class="ttdef"><b>Definition:</b> <a href="lista_8h_source.html#l00023">lista.h:23</a></div></div>
+<div class="ttc" id="classLista_html_a5bf4fa385b4d0e6038d2dfcba5eea910"><div class="ttname"><a href="classLista.html#a5bf4fa385b4d0e6038d2dfcba5eea910">Lista::Get</a></div><div class="ttdeci">T Get(Iterador&lt; T &gt; it)</div><div class="ttdoc">Devuelve el elemento de una posición. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8cpp_source.html#l00088">lista.cpp:88</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<hr>
+<small>ETS Ingeniería Informática y Telecomunicaciones. Universidad de Granada.
+</small>

@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Pila Max: Fichero Fuente include/pruebalista.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Pila Max
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('pruebalista_8cpp_source.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">pruebalista.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="lista_8h.html">lista.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keywordtype">int</span> main(){</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="classLista.html">Lista&lt;int&gt;</a> l;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 4; ++i)</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        l.<a class="code" href="classLista.html#a46866fc0097ea39e58866fab241f4cc5">Insertar</a>(l.<a class="code" href="classLista.html#a5329b45219eaf306b28c3ce7f309ac78">begin</a>(),i);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">while</span>(!l.<a class="code" href="classLista.html#a681ac2d3562a5362de6e18df0d229e9d">Vacia</a>()){</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        cout &lt;&lt; l.<a class="code" href="classLista.html#a412b7776b838ef2e483a8f181a223786">front</a>() &lt;&lt; endl;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        l.<a class="code" href="classLista.html#aba7b172959d3d84e59d9f409678cd95a">Borrar</a>(l.<a class="code" href="classLista.html#a5329b45219eaf306b28c3ce7f309ac78">begin</a>());</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    }</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="ttc" id="classLista_html_a5329b45219eaf306b28c3ce7f309ac78"><div class="ttname"><a href="classLista.html#a5329b45219eaf306b28c3ce7f309ac78">Lista::begin</a></div><div class="ttdeci">Iterador&lt; T &gt; begin() const </div><div class="ttdoc">Devuelve un iterador a la primera posición. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8cpp_source.html#l00055">lista.cpp:55</a></div></div>
+<div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
+<div class="ttc" id="classLista_html_a681ac2d3562a5362de6e18df0d229e9d"><div class="ttname"><a href="classLista.html#a681ac2d3562a5362de6e18df0d229e9d">Lista::Vacia</a></div><div class="ttdeci">bool Vacia()</div><div class="ttdoc">Comprueba si la lista está vacía. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8cpp_source.html#l00077">lista.cpp:77</a></div></div>
+<div class="ttc" id="classLista_html_a46866fc0097ea39e58866fab241f4cc5"><div class="ttname"><a href="classLista.html#a46866fc0097ea39e58866fab241f4cc5">Lista::Insertar</a></div><div class="ttdeci">Iterador&lt; T &gt; Insertar(Iterador&lt; T &gt; it, const T &amp;t)</div><div class="ttdoc">Inserta un elemento en una posición. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8cpp_source.html#l00103">lista.cpp:103</a></div></div>
+<div class="ttc" id="classLista_html_aba7b172959d3d84e59d9f409678cd95a"><div class="ttname"><a href="classLista.html#aba7b172959d3d84e59d9f409678cd95a">Lista::Borrar</a></div><div class="ttdeci">Iterador&lt; T &gt; Borrar(Iterador&lt; T &gt; it)</div><div class="ttdoc">Elimina una posicion de la lista, celda incluida. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8cpp_source.html#l00093">lista.cpp:93</a></div></div>
+<div class="ttc" id="classLista_html"><div class="ttname"><a href="classLista.html">Lista</a></div><div class="ttdoc">T.D.A. Lista. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8h_source.html#l00030">lista.h:30</a></div></div>
+<div class="ttc" id="lista_8h_html"><div class="ttname"><a href="lista_8h.html">lista.h</a></div><div class="ttdoc">Fichero cabecera del TDA Lista. </div></div>
+<div class="ttc" id="classLista_html_a412b7776b838ef2e483a8f181a223786"><div class="ttname"><a href="classLista.html#a412b7776b838ef2e483a8f181a223786">Lista::front</a></div><div class="ttdeci">T front() const </div><div class="ttdoc">Devuelve el elemento del principio de la lista. </div><div class="ttdef"><b>Definition:</b> <a href="lista_8cpp_source.html#l00067">lista.cpp:67</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<hr>
+<small>ETS Ingeniería Informática y Telecomunicaciones. Universidad de Granada.
+</small>

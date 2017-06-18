@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Pila Max: Fichero Fuente include/VD.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Pila Max
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('VD_8cpp_source.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">VD.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="VD_8cpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/************************</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *    Constructores     *</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> ************************/</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//Constructor por defecto</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classVD.html#a85d6e04a09adabaefe28fc440f4d9102">   14</a></span>&#160;<a class="code" href="classVD.html#a85d6e04a09adabaefe28fc440f4d9102">VD&lt;T&gt;::VD</a>() : _size(0), _cap(10), _datos(new T[_cap]) {}</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">//Constructor de copia </span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classVD.html#a74d379eb3ca2ef5f715624222bba5d71">   18</a></span>&#160;<a class="code" href="classVD.html#a85d6e04a09adabaefe28fc440f4d9102">VD&lt;T&gt;::VD</a>(<span class="keyword">const</span> <a class="code" href="classVD.html">VD</a> &amp; v){</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    _size = v.<a class="code" href="classVD.html#a291a1c90a175c8bf31fd3855ef6398c2">_size</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    _cap = v.<a class="code" href="classVD.html#a03e1ffe786b532c0f8828ae0f633a7e3">_cap</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    _datos = <span class="keyword">new</span> T[_cap];</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 0; i&lt;v.<a class="code" href="classVD.html#ac0c36870b58a1b422df1aca6fa299a49">size</a>() - 1; ++i)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        _datos[i] = v.<a class="code" href="classVD.html#a4aefc67c4ca7d3ae193a483851847ca7">_datos</a>[i];</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">//Destructor</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classVD.html#a0533f99aa2fee31fde63edd6c4b8bb2d">   28</a></span>&#160;<a class="code" href="classVD.html#a0533f99aa2fee31fde63edd6c4b8bb2d">VD&lt;T&gt;::~VD</a>(){</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">delete</span> _datos;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">/************************</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> *      Operadores      *</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> ************************/</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classVD.html#a645b65a6343059cd921f6a2856c97249">   37</a></span>&#160;<a class="code" href="classVD.html">VD&lt;T&gt;</a> &amp; <a class="code" href="classVD.html#a645b65a6343059cd921f6a2856c97249">VD&lt;T&gt;::operator=</a>(<span class="keyword">const</span> <a class="code" href="classVD.html">VD&lt;T&gt;</a> &amp; v){</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">if</span>( <span class="keyword">this</span> != v ){</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keyword">delete</span> _datos;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        _size = v.<a class="code" href="classVD.html#a291a1c90a175c8bf31fd3855ef6398c2">_size</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        _cap = v.<a class="code" href="classVD.html#a03e1ffe786b532c0f8828ae0f633a7e3">_cap</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        _datos = <span class="keyword">new</span> T[_cap];</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 0; i&lt;v.<a class="code" href="classVD.html#ac0c36870b58a1b422df1aca6fa299a49">size</a> - 1; ++i)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            _datos[i] = v.<a class="code" href="classVD.html#a4aefc67c4ca7d3ae193a483851847ca7">_datos</a>[i];</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classVD.html#a7cd05cb587b7889fcb4b30e20230f6ab">   49</a></span>&#160;T &amp; <a class="code" href="classVD.html#a7cd05cb587b7889fcb4b30e20230f6ab">VD&lt;T&gt;::operator[]</a>(<span class="keywordtype">unsigned</span> i){</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">return</span> _datos[i];</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">/*********************</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"> *  Otras funciones  *</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment"> *********************/</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classVD.html#ac0c36870b58a1b422df1aca6fa299a49">   58</a></span>&#160;<span class="keywordtype">unsigned</span> <a class="code" href="classVD.html#ac0c36870b58a1b422df1aca6fa299a49">VD&lt;T&gt;::size</a>()<span class="keyword"> const</span>{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">return</span> _size;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classVD.html#acdfc22a424a36b17d2a231620be866ba">   63</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classVD.html#acdfc22a424a36b17d2a231620be866ba">VD&lt;T&gt;::resize</a>(<span class="keywordtype">unsigned</span> n){</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    T * aux = <span class="keyword">new</span> T[n];</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = 0; i &lt; n; ++i)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        aux[i] = _datos[i];</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    _cap = n;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    T * del = _datos;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    _datos = aux;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">delete</span> del;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classVD.html#af569c70d43bdb92bbe1909f3b6022d0c">   74</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classVD.html#af569c70d43bdb92bbe1909f3b6022d0c">VD&lt;T&gt;::push_back</a>(<span class="keyword">const</span> T &amp; t){</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">if</span>(_size == _cap)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        resize(_cap * 2);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    _datos[_size] = t;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    ++_size;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classVD.html#a5cee83ea68939fb432dedadb2e5eb605">   82</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classVD.html#a5cee83ea68939fb432dedadb2e5eb605">VD&lt;T&gt;::pop_back</a>(){</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">if</span>(_size &gt;= 1){</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        --_size;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classVD.html#a4db2e1e8dc098cc385001867ac63cc51">   89</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classVD.html#a4db2e1e8dc098cc385001867ac63cc51">VD&lt;T&gt;::Borrar</a>(<span class="keywordtype">unsigned</span> it){</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = it; i &lt; _size; ++i)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        _datos[i] = _datos[++i];</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    --_size;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classVD.html#ad9c2b95e8f81164ee23eee1b96160b9f">   96</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classVD.html#ad9c2b95e8f81164ee23eee1b96160b9f">VD&lt;T&gt;::Insertar</a>(<span class="keywordtype">unsigned</span> it, <span class="keyword">const</span> T &amp; t){</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">if</span>(_size == _cap)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        resize(_cap * 2);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i = _size; i &gt; it; ++i)</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        _datos[++i] = _datos[i];</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    ++_size;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classVD.html#aa2961de99fd5f655defed9b2698030f6">  105</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classVD.html#aa2961de99fd5f655defed9b2698030f6">VD&lt;T&gt;::Vacia</a>(){</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">if</span>(_size == 0)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="ttc" id="classVD_html_a4aefc67c4ca7d3ae193a483851847ca7"><div class="ttname"><a href="classVD.html#a4aefc67c4ca7d3ae193a483851847ca7">VD::_datos</a></div><div class="ttdeci">T * _datos</div><div class="ttdef"><b>Definition:</b> <a href="VD_8h_source.html#l00037">VD.h:37</a></div></div>
+<div class="ttc" id="classVD_html_aa2961de99fd5f655defed9b2698030f6"><div class="ttname"><a href="classVD.html#aa2961de99fd5f655defed9b2698030f6">VD::Vacia</a></div><div class="ttdeci">bool Vacia()</div><div class="ttdoc">Comprueba si el vector está vacío. </div><div class="ttdef"><b>Definition:</b> <a href="VD_8cpp_source.html#l00105">VD.cpp:105</a></div></div>
+<div class="ttc" id="classVD_html_ac0c36870b58a1b422df1aca6fa299a49"><div class="ttname"><a href="classVD.html#ac0c36870b58a1b422df1aca6fa299a49">VD::size</a></div><div class="ttdeci">unsigned size() const </div><div class="ttdoc">Tamaño el vector. </div><div class="ttdef"><b>Definition:</b> <a href="VD_8cpp_source.html#l00058">VD.cpp:58</a></div></div>
+<div class="ttc" id="classVD_html_a4db2e1e8dc098cc385001867ac63cc51"><div class="ttname"><a href="classVD.html#a4db2e1e8dc098cc385001867ac63cc51">VD::Borrar</a></div><div class="ttdeci">void Borrar(unsigned it)</div><div class="ttdoc">Elimina una posicion de la vector, celda incluida. </div><div class="ttdef"><b>Definition:</b> <a href="VD_8cpp_source.html#l00089">VD.cpp:89</a></div></div>
+<div class="ttc" id="classVD_html_a5cee83ea68939fb432dedadb2e5eb605"><div class="ttname"><a href="classVD.html#a5cee83ea68939fb432dedadb2e5eb605">VD::pop_back</a></div><div class="ttdeci">void pop_back()</div><div class="ttdoc">Elimina el elemento del final del vector. </div><div class="ttdef"><b>Definition:</b> <a href="VD_8cpp_source.html#l00082">VD.cpp:82</a></div></div>
+<div class="ttc" id="classVD_html_a85d6e04a09adabaefe28fc440f4d9102"><div class="ttname"><a href="classVD.html#a85d6e04a09adabaefe28fc440f4d9102">VD::VD</a></div><div class="ttdeci">VD()</div><div class="ttdoc">Constructor por defecto. </div><div class="ttdef"><b>Definition:</b> <a href="VD_8cpp_source.html#l00014">VD.cpp:14</a></div></div>
+<div class="ttc" id="classVD_html_acdfc22a424a36b17d2a231620be866ba"><div class="ttname"><a href="classVD.html#acdfc22a424a36b17d2a231620be866ba">VD::resize</a></div><div class="ttdeci">void resize(unsigned n)</div><div class="ttdoc">Redimensiona el vector. </div><div class="ttdef"><b>Definition:</b> <a href="VD_8cpp_source.html#l00063">VD.cpp:63</a></div></div>
+<div class="ttc" id="classVD_html_a645b65a6343059cd921f6a2856c97249"><div class="ttname"><a href="classVD.html#a645b65a6343059cd921f6a2856c97249">VD::operator=</a></div><div class="ttdeci">VD &amp; operator=(const VD&lt; T &gt; &amp;v)</div><div class="ttdoc">Operador de asignación. </div><div class="ttdef"><b>Definition:</b> <a href="VD_8cpp_source.html#l00037">VD.cpp:37</a></div></div>
+<div class="ttc" id="classVD_html_ad9c2b95e8f81164ee23eee1b96160b9f"><div class="ttname"><a href="classVD.html#ad9c2b95e8f81164ee23eee1b96160b9f">VD::Insertar</a></div><div class="ttdeci">void Insertar(unsigned it, const T &amp;t)</div><div class="ttdoc">Inserta un elemento en una posición. </div><div class="ttdef"><b>Definition:</b> <a href="VD_8cpp_source.html#l00096">VD.cpp:96</a></div></div>
+<div class="ttc" id="classVD_html"><div class="ttname"><a href="classVD.html">VD</a></div><div class="ttdoc">T.D.A. Vector Dinámico. </div><div class="ttdef"><b>Definition:</b> <a href="VD_8h_source.html#l00015">VD.h:15</a></div></div>
+<div class="ttc" id="classVD_html_a7cd05cb587b7889fcb4b30e20230f6ab"><div class="ttname"><a href="classVD.html#a7cd05cb587b7889fcb4b30e20230f6ab">VD::operator[]</a></div><div class="ttdeci">T &amp; operator[](unsigned i)</div><div class="ttdoc">Operador de indexación. </div><div class="ttdef"><b>Definition:</b> <a href="VD_8cpp_source.html#l00049">VD.cpp:49</a></div></div>
+<div class="ttc" id="classVD_html_a03e1ffe786b532c0f8828ae0f633a7e3"><div class="ttname"><a href="classVD.html#a03e1ffe786b532c0f8828ae0f633a7e3">VD::_cap</a></div><div class="ttdeci">unsigned _cap</div><div class="ttdef"><b>Definition:</b> <a href="VD_8h_source.html#l00036">VD.h:36</a></div></div>
+<div class="ttc" id="classVD_html_af569c70d43bdb92bbe1909f3b6022d0c"><div class="ttname"><a href="classVD.html#af569c70d43bdb92bbe1909f3b6022d0c">VD::push_back</a></div><div class="ttdeci">void push_back(const T &amp;t)</div><div class="ttdoc">Inserta un elemento al final del vector. </div><div class="ttdef"><b>Definition:</b> <a href="VD_8cpp_source.html#l00074">VD.cpp:74</a></div></div>
+<div class="ttc" id="classVD_html_a291a1c90a175c8bf31fd3855ef6398c2"><div class="ttname"><a href="classVD.html#a291a1c90a175c8bf31fd3855ef6398c2">VD::_size</a></div><div class="ttdeci">unsigned _size</div><div class="ttdef"><b>Definition:</b> <a href="VD_8h_source.html#l00035">VD.h:35</a></div></div>
+<div class="ttc" id="classVD_html_a0533f99aa2fee31fde63edd6c4b8bb2d"><div class="ttname"><a href="classVD.html#a0533f99aa2fee31fde63edd6c4b8bb2d">VD::~VD</a></div><div class="ttdeci">~VD()</div><div class="ttdoc">Destructor de la clase. </div><div class="ttdef"><b>Definition:</b> <a href="VD_8cpp_source.html#l00028">VD.cpp:28</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<hr>
+<small>ETS Ingeniería Informática y Telecomunicaciones. Universidad de Granada.
+</small>

@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Pila Max: Fichero Fuente include/pruebavec.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Pila Max
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('pruebavec_8cpp_source.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">pruebavec.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="VD_8h.html">VD.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keywordtype">int</span> main(){</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="classVD.html">VD&lt;int&gt;</a> v;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 30; ++i)</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        v.<a class="code" href="classVD.html#af569c70d43bdb92bbe1909f3b6022d0c">push_back</a>(i);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">while</span>(!v.<a class="code" href="classVD.html#aa2961de99fd5f655defed9b2698030f6">Vacia</a>()){</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        cout &lt;&lt; v[v.<a class="code" href="classVD.html#ac0c36870b58a1b422df1aca6fa299a49">size</a>()-1] &lt;&lt; endl;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        v.<a class="code" href="classVD.html#a5cee83ea68939fb432dedadb2e5eb605">pop_back</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<div class="ttc" id="classVD_html_aa2961de99fd5f655defed9b2698030f6"><div class="ttname"><a href="classVD.html#aa2961de99fd5f655defed9b2698030f6">VD::Vacia</a></div><div class="ttdeci">bool Vacia()</div><div class="ttdoc">Comprueba si el vector está vacío. </div><div class="ttdef"><b>Definition:</b> <a href="VD_8cpp_source.html#l00105">VD.cpp:105</a></div></div>
+<div class="ttc" id="classVD_html_ac0c36870b58a1b422df1aca6fa299a49"><div class="ttname"><a href="classVD.html#ac0c36870b58a1b422df1aca6fa299a49">VD::size</a></div><div class="ttdeci">unsigned size() const </div><div class="ttdoc">Tamaño el vector. </div><div class="ttdef"><b>Definition:</b> <a href="VD_8cpp_source.html#l00058">VD.cpp:58</a></div></div>
+<div class="ttc" id="classVD_html_a5cee83ea68939fb432dedadb2e5eb605"><div class="ttname"><a href="classVD.html#a5cee83ea68939fb432dedadb2e5eb605">VD::pop_back</a></div><div class="ttdeci">void pop_back()</div><div class="ttdoc">Elimina el elemento del final del vector. </div><div class="ttdef"><b>Definition:</b> <a href="VD_8cpp_source.html#l00082">VD.cpp:82</a></div></div>
+<div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
+<div class="ttc" id="classVD_html"><div class="ttname"><a href="classVD.html">VD</a></div><div class="ttdoc">T.D.A. Vector Dinámico. </div><div class="ttdef"><b>Definition:</b> <a href="VD_8h_source.html#l00015">VD.h:15</a></div></div>
+<div class="ttc" id="VD_8h_html"><div class="ttname"><a href="VD_8h.html">VD.h</a></div><div class="ttdoc">Fichero cabecera del TDA VD(Vector dinámico). </div></div>
+<div class="ttc" id="classVD_html_af569c70d43bdb92bbe1909f3b6022d0c"><div class="ttname"><a href="classVD.html#af569c70d43bdb92bbe1909f3b6022d0c">VD::push_back</a></div><div class="ttdeci">void push_back(const T &amp;t)</div><div class="ttdoc">Inserta un elemento al final del vector. </div><div class="ttdef"><b>Definition:</b> <a href="VD_8cpp_source.html#l00074">VD.cpp:74</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<hr>
+<small>ETS Ingeniería Informática y Telecomunicaciones. Universidad de Granada.
+</small>

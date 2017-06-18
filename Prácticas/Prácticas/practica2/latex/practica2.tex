@@ -1,0 +1,187 @@
+\input{preambuloSimple.tex}
+
+%----------------------------------------------------------------------------------------
+%	TÍTULO Y DATOS DEL ALUMNO
+%----------------------------------------------------------------------------------------
+
+\title{	
+\normalfont \normalsize 
+\textsc{\textbf{Estructura de Datos (2016-2017)} \\ Subgrupo C2 \\ Grado en Ingeniería Informática\\ Universidad de Granada} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge Práctica 2: Documentación del Software \\ % The assignment title
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{Mario Rodríguez Ruiz} % Nombre y apellidos
+
+\date{\normalsize\today} % Incluye la fecha actual
+
+%----------------------------------------------------------------------------------------
+% DOCUMENTO
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Muestra el Título
+
+\newpage %inserta un salto de página
+
+\tableofcontents % para generar el índice de contenidos
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	Cuestión 1
+%----------------------------------------------------------------------------------------
+
+\section{Especificación}
+\textbf{\textit{Dar la especificación. Establecer una definición y el conjunto de operaciones básicas.}}
+
+\subsection{T.D.A. Frase}
+Almacena una frase en un idioma de origen junto con sus distintas traducciones a otro idioma, 
+ya que una frase puede tener significados distintos.
+\\
+
+\textbf{\textit{Operaciones}:}
+\begin{itemize}
+	\item Constructores: constructor por defecto, constructor de copia, constructor con un tamaño determinado.
+	\item Consulta: acceder a la frase origen, a las traducciones y al número de ellas.
+	\item Modificadores: de la frase de origen y de las traducciones.	
+	\item Operadores: Escritura y Lectura de una frase por un flujo de entrada y salida, respectivamente; comparar alfabéticamente dos frases.
+\end{itemize}
+
+\subsection{T.D.A. ConjuntoFrases}
+Almacena un grupo de frases junto con sus traducciones ordenadas alfabéticamente en función de la frase origen.
+Para cada frase en un idioma origen se asocian un conjunto de frases, en las que se traduce la frase origen en el idioma destino. 
+
+Entradas posibles en un traductor español-inglés / inglés-español:
+\begin{itemize}
+	\item Give a dog a bad name and hang it;Hazte fama y échate a dormir;Un perro maté y mataperros me llamaron
+	\item Lo tienes claro;You’ve got another thing coming
+\end{itemize}
+
+
+\textbf{\textit{Operaciones}:}
+\begin{itemize}
+	\item Constructores: constructor por defecto, constructor de copia, constructor con un tamaño determinado.
+	\item Consulta: acceder al número de frases almacenadas, a una frase específica, a un conjunto de traducciones y a las frases que contengan una cadena.	
+	\item Operadores: Escritura y lectura de un conjunto de frases por un flujo de entrada y salida, respectivamente.
+\end{itemize}
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	Cuestión 2
+%----------------------------------------------------------------------------------------
+
+\section{Diferentes estructuras tipo rep}
+\textbf{\textit{Determinar diferentes estructuras de datos para tipo rep.}}
+
+\subsection{T.D.A. Frase}
+\begin{lstlisting}
+	class Frase{
+		private:
+			string origen ;         
+			string *traducciones ;  
+			int num_trad ;  
+				
+	class Frase{
+		private:        
+			string origen ;         
+			string **traducciones ; 
+			int num_orig ; 
+			int num_trad ;
+			
+	struct Frase{
+		string origen;
+		vector<string> traducciones;
+	};
+\end{lstlisting}
+
+\subsection{T.D.A. ConjuntoFrases}
+\begin{lstlisting}
+	class ConjuntoFrases{
+		private:
+			Frase *frases ;     
+			int num_frases ;
+	
+	class ConjuntoFrases {
+		private:
+			vector<Frase> frases; 	
+\end{lstlisting}
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	Cuestión 3
+%----------------------------------------------------------------------------------------
+
+\section{Estructuras de datos para representar el tipo rep}
+\textbf{\textit{Escoger una de las estructuras de datos para representar el tipo rep}}
+
+\subsection{T.D.A. Frase}
+\begin{lstlisting}
+	class Frase{
+		private:
+			string origen ;         
+			string *traducciones ;  
+			int num_trad ;  
+\end{lstlisting}
+
+\subsection{T.D.A. ConjuntoFrases}
+\begin{lstlisting}
+	class ConjuntoFrases{
+		private:
+			Frase *frases ;     
+			int num_frases ;
+\end{lstlisting}
+
+%----------------------------------------------------------------------------------------
+%	Cuestión 4
+%----------------------------------------------------------------------------------------
+
+\section{Invariante de la representación y función de abstracción}
+\textbf{\textit{ Para la estructura de datos del tipo rep
+		establecer cual es el invariante de la
+		representación y función de abstracción.}}
+
+\subsection{Invariante de la representación}
+\textbf{T.D.A. Frase}
+\begin{center}
+	$\forall i \ r.frases[i].traducciones.size() > 0$
+\end{center} 
+Condición de que cada frase origen tiene una frase destino.
+\\
+
+\textbf{T.D.A. ConjuntoFrases}
+\begin{center}
+	$\forall i,j \ \textup{tales que } i < j \rightarrow r.frases[i].origen < r.frases[j].origen, 0 \leq i,j < n$
+\end{center} 
+Expresa que el conjunto está ordenado por la frase origen.
+
+\newpage
+
+\subsection{Función de abstracción}
+\textbf{T.D.A. Frase}
+\begin{displaymath}
+f_{A}(r) =\{(r.origen;r.traducciones[0], ... , r.traducciones[n-1])\}
+\end{displaymath}
+
+\textbf{T.D.A. ConjuntoFrases}
+
+\begin{displaymath}
+f_{A}(r) =\{(r.frases[0].origen;r.frases[0].traducciones[0],...,
+\end{displaymath}
+\begin{displaymath}
+ frases[0].traducciones[frases[0].traducciones.size()-1]),
+\end{displaymath}
+\begin{displaymath}
+\ldots
+\end{displaymath}
+\begin{displaymath}
+(r.frases[r.frases.size-1].origen;r.frases[r.frases.size()-1].traducciones[0],...,
+\end{displaymath}
+\begin{displaymath}
+[r.frases.size()-1].traducciones[r.frases[0].traducciones.size()-1])\}
+\end{displaymath}
+\end{document}

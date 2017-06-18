@@ -1,0 +1,10 @@
+\select@language {spanish}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Informaci\IeC {\'o}n del CPU.}}{3}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces M\IeC {\'o}dulo 1 de memoria RAM.}}{3}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces M\IeC {\'o}dulo 2 de memoria RAM.}}{4}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Informaci\IeC {\'o}n del SO.}}{4}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Informaci\IeC {\'o}n del compilador.}}{4}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Datos dibujados con Gnuplot}}{8}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Superposici\IeC {\'o}n eficiencia te\IeC {\'o}rica y emp\IeC {\'\i }rica}}{9}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Imagen de UdeLAR}}{9}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Este es un ejemplo de c\IeC {\'o}mo insertar una figura y citar la fuente con la etiqueta \textbackslash cite : \cite {figura1} (para a\IeC {\~n}adir la nota a pie de figura es necesario instalar un paquete extra, consulte el registro de compilaci\IeC {\'o}n cuando tenga alg\IeC {\'u}n problema)}}{11}
