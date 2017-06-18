@@ -1,0 +1,4 @@
+
+Entrar en include/cual_compila.h y
+modificar el valor de CUAL_COMPILA para
+que compile en la estructura deseada (1 para el árbol y 2 para hash).

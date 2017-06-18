@@ -1,0 +1,5 @@
+\select@language {spanish}
+\contentsline {section}{\numberline {1}Definir una funci\IeC {\'o}n que permita invertir un objeto de tipo list. Los elementos que contiene la lista son enteros}{3}{section.1}
+\contentsline {section}{\numberline {2}Definir una funci\IeC {\'o}n que obtenga una cola de prioridad (priority\_queue) con la informaci\IeC {\'o}n de todos los alumnos, de manera que la prioridad se define de mayor a menor valor de selectividad.}{3}{section.2}
+\contentsline {section}{\numberline {3}Dada la clase list instanciada a enteros, crear una funci\IeC {\'o}n que elimine los elementos pares de la lista. Para implementarla hacer uso de iteradores.}{4}{section.3}
+\contentsline {section}{\numberline {4}Ejercicios 5 y 6}{4}{section.4}

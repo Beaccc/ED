@@ -1,0 +1,171 @@
+\input{preambuloSimple.tex}
+
+%----------------------------------------------------------------------------------------
+%	TÍTULO Y DATOS DEL ALUMNO
+%----------------------------------------------------------------------------------------
+
+\title{	
+\normalfont \normalsize 
+\textsc{\textbf{Estructura de Datos (2016-2017)} \\ Subgrupo C2 \\ Grado en Ingeniería Informática\\ Universidad de Granada} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge Relación 1: Eficiencia \\ % The assignment title
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{Mario Rodríguez Ruiz} % Nombre y apellidos
+
+\date{\normalsize\today} % Incluye la fecha actual
+
+%----------------------------------------------------------------------------------------
+% DOCUMENTO
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Muestra el Título
+
+\newpage %inserta un salto de página
+
+\tableofcontents % para generar el índice de contenidos
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	Cuestión 1.3
+%----------------------------------------------------------------------------------------
+\section{Problema 1.3}
+\textbf{\textit{Ordenar de menor a mayor los siguientes órdenes de eficiencia:}}
+\begin{gather*}
+	n, \sqrt{n}, n^3+1, n^2, nlog_{2}(n^2),nlog_{2}log_{2}(n^2), 3^{log_{2}(n)}, 3^n, 2^n, 2^n+3^{n-1}, 20000, n + 100, n2^n\\
+	nlog_{2}log_{2}(n^2) <  nlog_{2}(n^2) < 3^{log_{2}(n)} < \sqrt{n} < n < n^2 < 2^n < 2^n + 3^{n-1} < \\
+	< n2^n < n^3 + 1 < 3^n < n + 100 < 20000
+\end{gather*}
+
+%----------------------------------------------------------------------------------------
+%	Cuestión 1.9
+%----------------------------------------------------------------------------------------
+\section{Problema 1.6}
+\textbf{\textit{Demostrar que si f(n) $ \ni $ O(g(n)) y g(n) $ \ni $ O(h(n)) entonces f(n) $ \ni $ O(h(n))}}
+\begin{gather*}
+	O(n) = \{1, 10, 5, log_{2}(n), log_{7}(n),3 log_{2}(n), \sqrt{n}, n, ...\}\\	
+	O(n^2) = \{n^2,..., 3n^2+n,...\} U O(n) \\
+	f(n) = log_{2}(n) \ni O(log_{2}(n))\\
+	f(n) = log_{2}(n) \ni O(n)\\
+	g(n) = n^2 \ni O(n^2)
+\end{gather*}
+
+
+%----------------------------------------------------------------------------------------
+%	Cuestión 1.9
+%----------------------------------------------------------------------------------------
+\section{Problema 1.9}
+\textbf{\textit{Obtener usando la notación O-mayúscula la eficiencia del siguiente trozo de código:}}
+\begin {lstlisting}						
+for (int i=0; i<n; i++)						
+	for (int j=0; j<n; j++){
+		C[i][j]= 0;
+		for (k=0;k<n;k++)
+			C[i][j]+=A[i][k]*B[k][j];
+	}
+\end{lstlisting}
+
+\begin{itemize}
+\item Linea 1: 3 OE (asignación, comparación, incremento) 
+\item Linea 2: 3 OE (asignación, comparación, incremento)
+\item Linea 3: 2 OE (acceso al elemento C[[i][j], asignación)
+\item Linea 4: 3 OE (asignación, comparación, incremento)
+\item Linea 5: 7 OE (4 accesos a elementos de las matrices, 2 operaciones, asignación)
+\end{itemize}
+Se tienen tres bucles anidados, haciendo cada uno \textbf{n iteraciones}. El resto de la función es de orden constante, por lo que puede identificarse cada una como \textbf{O(1)}. De esta forma, el tiempo de ejecución en función de n es:
+
+\begin{equation}
+	T(n)=\sum_{i=0}^{n}\sum_{j=0}^{n}\sum_{k=0}^{n}1= \sum_{i=0}^{n}\sum_{j=0}^{n}n=n^3
+\end{equation}
+
+\begin{equation}
+\textup{Por lo que se puede confirmar que la eficiencia del código es de } O(n^3)
+\end{equation}
+
+
+%----------------------------------------------------------------------------------------
+%	Cuestión 1.10
+%----------------------------------------------------------------------------------------
+\section{Problema 1.10}
+\textbf{\textit{Obtener usando la notación O-mayúscula la eficiencia de la siguiente función:}}
+\begin {lstlisting}						
+void ejemplo(int n)
+{
+	int i, j, k;
+	for (i = 1; i < n; i++)
+		for (j = i+1; j <= n; j++)
+			for (k = 1; k <= j; k++)
+				Global += k*i;
+}
+\end{lstlisting}
+
+\begin{itemize}
+	\item Linea 4: 3 OE (asignación, comparación, incremento) 
+	\item Linea 5: 4 OE (asignación, comparación, 2 incrementos)
+	\item Linea 6: 4 OE (asignación, comparación, incremento)
+	\item Linea 7: 3 OE (asignación, 2 operaciones)
+\end{itemize}
+Bucle de la j
+\begin{equation}
+	Tj (n)= \frac{(n-i)*(1+n-i)}{2} \rightarrow O(n^2)
+\end{equation}
+
+Bucle de la i
+\begin{equation}
+	Ti (n)= \sum_{i=0}^{n}(\frac{(n-i)*(1+n-i)}{2}) 	
+\end{equation}
+\begin{equation}
+	\textup{Por lo que el orden de eficiencia de la función es de }  O(n^2)
+\end{equation}
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	Cuestión 1.11
+%----------------------------------------------------------------------------------------
+\section{Problema 1.11}
+\textbf{\textit{Obtener usando la notación O-mayúscula la eficiencia del siguiente trozo de código:}}
+\begin {lstlisting}						
+	for (i=0;i<n;i++)
+		if (i%2){
+			for (j=i;j<n;j++)
+				x*=i ;
+			for (j=1;j<i;j++)
+				y*=j ;
+		}
+\end{lstlisting}
+
+\begin{itemize}
+	\item Linea 1: 3 OE (asignación, comparación, incremento) 
+	\item Linea 2: 1 OE (operación)
+	\item Linea 3: 3 OE (asignación, comparación, incremento)
+	\item Linea 4: 2 OE (producto, asignación)
+	\item Linea 5: 3 OE (asignación, comparación, incremento)
+	\item Linea 6: 2 OE (producto, asignación)
+\end{itemize}
+
+Bucle de la j
+\begin{equation}
+\sum_{j=i}^{n}1 = n-i 
+\end{equation}
+\begin{equation}
+\sum_{j=1}^{i}1 = i 
+\end{equation}
+\begin{equation}
+Tj (n) = n - i + i = n  
+\end{equation}
+
+\begin{equation}
+T(n)=\sum_{i=0}^{n}n = n\sum_{i=0}^{\frac{n}{2}}1 = n \frac{n}{2} = \frac{n^2}{2}
+\end{equation}
+
+\begin{equation}
+\textup{Por lo que se puede confirmar que la eficiencia del código es de } O(n^2)
+\end{equation}
+
+\newpage
+\end{document}

@@ -1,0 +1,279 @@
+\input{preambuloSimple.tex}
+
+%----------------------------------------------------------------------------------------
+%	TÍTULO Y DATOS DEL ALUMNO
+%----------------------------------------------------------------------------------------
+
+\title{	
+\normalfont \normalsize 
+\textsc{\textbf{Estructura de Datos (2016-2017)} \\ Grupo C \\ Grado en Ingeniería Informática\\ Universidad de Granada} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge Relación 2: Abstracción \\ % The assignment title
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{Mario Rodríguez Ruiz} % Nombre y apellidos
+
+\date{\normalsize\today} % Incluye la fecha actual
+
+%----------------------------------------------------------------------------------------
+% DOCUMENTO
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Muestra el Título
+
+\newpage %inserta un salto de página
+
+\tableofcontents % para generar el índice de contenidos
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	Problema 1
+%----------------------------------------------------------------------------------------
+\section{Definir el T.D.A Servidor de red. Un servidor es un punto de red que se encuentra
+	identificado por una dirección ip. Una dirección ip viene definida por cuatro dígitos que
+	pueden tener valores que van desde 0 a 255.}
+\subsection{Dar la especificación del tipo Servidor. Además establecer las operaciones que
+	manejan al T.D.A}
+T.D.A \textbf{Servidor de red}\\
+
+\textbf{Especificación:} 
+Representa la dirección IP de un servidor de red definida en 4 dígitos.
+
+\subsubsection{Operaciones:}
+\begin{itemize}
+	\item Constructores: constructor por defecto, constructor con una IP determinada.
+	\item Consulta: acceder a cualquiera de los cuatro dígitos.
+	\item Modificadores: de los dígitos.
+	\item Escritura y Lectura de una IP por un flujo de entrada y salida, respectivamente.
+\end{itemize}
+
+\subsection{Definir al menos dos tipo rep}
+\begin{enumerate}[a)]
+\item Posibilidad 1:
+\begin{lstlisting}[style=cmas]
+class ServidorRed{
+	private:
+		int d1, d2, d3, d4 ;		
+\end{lstlisting}
+\setlength{\parskip}{-4mm}
+\item Posibilidad 2:
+\begin{lstlisting}[style=cmas]
+class ServidorRed{
+	private:
+		string direccion ;		
+\end{lstlisting}
+\setlength{\parskip}{-4mm}
+\item Posibilidad 3:
+\begin{lstlisting}[style=cmas]
+class ServidorRed{
+	private:
+		int digito[4] ;		
+\end{lstlisting}
+\end{enumerate}
+
+\subsection{Escoger uno de los tipo rep y para éste establecer la función de abstracción}
+Tras haber elegido la posibilidad 3, la \textbf{función de abstracción} se define como:\\
+\begin{center}
+	$ f_{A}(r) = $ $ " $r.digito[0] . r.digito[1] . r.digito[2] . r.digito[3]$ " $
+\end{center}
+Donde r es una instancia del objeto abstracto de tipo rep que sirve para representar el T.D.A. Servidor de red
+
+\subsection{Invariante de la representación}
+\begin{center}
+	$ r.digito[i] \in ['0' - '255']\forall i = 0...3 $ (condición de que cada dígito debe encontrarse en el rango de valores especificado)
+\end{center}
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	Problema 2
+%----------------------------------------------------------------------------------------
+\section{Definir el T.D.A Subred. Este T.D.A es una colección de servidores (s1,s2,...,sn). En éste también se almacena
+	si dos servidores están conectados entre ellos}
+\subsection{Dar la especificación del tipo Subred. Además establecer las operaciones que
+	manejan a T.D.A}
+T.D.A \textbf{Subred}
+
+\textbf{Especificación:} colección de servidores de red (s1,s2,...,sn) que almacena además si existe un enlace directo entre dos servidores.
+
+\subsubsection{Operaciones:}
+\begin{itemize}
+	\item Constructores: constructor por defecto, constructor con una colección determinada.
+	\item Consulta: acceder a cualquiera de los servidores de la colección y al número total de éstos, así como a qué otros servidores se encuentran conectados.
+	\item Modificadores: de las conexiones entre servidores.
+	\item Escritura y Lectura de una Subred por un flujo de entrada y salida, respectivamente.
+\end{itemize}
+
+\subsection{Definir al menos dos tipo rep}
+\begin{enumerate}[a)]
+\item Posibilidad 1:
+\begin{lstlisting}[style=cmas]
+struct enlace{
+	unsigned *servidores_conectados ; 
+
+class Subred{
+	private:
+		ServidorRed *s ;
+		vector<enlace> enlaces ;
+		unsigned num_servers ;			
+\end{lstlisting}
+\setlength{\parskip}{-4mm}
+\item Posibilidad 2:
+\begin{lstlisting}[style=cmas]
+struct enlace{
+	bool *conexiones ;
+	
+class Subred{
+	private:
+		ServidorRed *s ;
+		vector<enlace> enlaces ;
+		unsigned num_servers ;		
+\end{lstlisting}
+\end{enumerate}
+
+\subsection{Escoger uno de los tipo rep y para éste establecer la función de abstracción}
+Tras haber elegido la posibilidad 1, la \textbf{función de abstracción} se define como:\\
+\begin{center}
+	$ f_{A}(r) = $ $ " $r.s[0], r.s[1],..., r.s[r.num\_servers - 1]$ " $
+\end{center}
+Donde r es una instancia del objeto abstracto de tipo rep que sirve para representar el T.D.A. Subred
+
+\subsection{Invariante de la representación}
+\begin{center}
+	$ (r.s[i] \neq r.s[j])\forall i,j $ $0 \leq i < j < r.num\_servers $
+\end{center}
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	Problema 3
+%----------------------------------------------------------------------------------------
+\section{Definir el T.D.A Punto Geográfico. Un punto geográfico se define por una latitud y longitud.
+	La latitud es la distancia en grados desde la línea del Ecuador a los Polos. Su rango va
+	desde -90º a 90º. La longitud es la distancia desde el meriadiano 0 al punto donde estamos.
+	El rango de valores que adopta va desde -180º a 180º.}
+\subsection{Dar la especificación del tipo Punto Geográfico. Además establecer las operaciones
+	que manejan a T.D.A}
+T.D.A \textbf{Punto Geográfico}\\
+
+\textbf{Especificación:} representa un punto geográfico de tal forma que contiene tanto una latitud (distancia en grados desde la línea del Ecuador a los Polos) como una longitud (distancia desde el meriadiano 0 al punto donde estamos) meridional.
+
+\subsubsection{Operaciones:}
+\begin{itemize}
+	\item Constructores: constructor por defecto, constructor con una latitud y longitud meridional determinadas.
+	\item Consulta: acceder a la latitud y a la longitud.
+	\item Modificadores: de la latitud y de la longitud.
+	\item Escritura y Lectura de un punto geográfico por un flujo de entrada y salida, respectivamente.
+\end{itemize}
+
+\subsection{Definir al menos dos tipo rep}
+\begin{enumerate}[a)]
+\item Posibilidad 1:
+\begin{lstlisting}[style=cmas]
+struct puntoGeografico{
+	int longitud ; 
+	int latitud ; 
+\end{lstlisting}
+\setlength{\parskip}{-4mm}
+\item Posibilidad 2:
+\begin{lstlisting}[style=cmas]
+class PuntoGeografico{
+private:
+	int punto[2] ; // punto[0] = longitud ; punto[1] = latitud ;
+\end{lstlisting}
+\newpage
+\item Posibilidad 3:
+\begin{lstlisting}[style=cmas]
+class PuntoGeografico{
+	private:
+		int longitud ; 
+		int latitud ;	
+\end{lstlisting}
+\end{enumerate}
+
+\subsection{Escoger uno de los tipo rep y para éste establecer la función de abstracción}
+Tras haber elegido la posibilidad 3, la \textbf{función de abstracción} se define como:\\
+\begin{center}
+	$ f_{A}(r) = $ $ " $r.longitud, r.latitud$ " $
+\end{center}
+Donde r es una instancia del objeto abstracto de tipo rep que sirve para representar el T.D.A. Punto Geográfico
+
+\subsection{Invariante de la representación}
+\begin{enumerate}[a)]
+	\item $ r.longitud \in ['-180' - '180'] $ (condición de que la longitud debe encontrarse en el rango de valores especificado)
+	\item $ r.latitud \in ['-90' - '90'] $ (condición de que la latitud debe encontrarse en el rango de valores especificado)
+\end{enumerate}
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	Problema 4
+%----------------------------------------------------------------------------------------
+\section{Definir el T.D.A Ruta. Una ruta es una secuencia de puntos geográficos (ver ejercicio
+	anterior)}
+\subsection{Dar la especificación del tipo Ruta. Además establecer las operaciones que manejan
+	a T.D.A}
+T.D.A \textbf{Ruta}
+
+\textbf{Especificación:} secuencia de puntos geográficos (p1,p2,...,pn).
+
+\subsubsection{Operaciones:}
+\begin{itemize}
+	\item Constructores: constructor por defecto, constructor a partir de una Ruta determinada.
+	\item Consulta: acceder a cualquiera de los puntos geográficos de la colección y al número total de éstos.
+	\item Escritura y Lectura de una Ruta por un flujo de entrada y salida, respectivamente.
+\end{itemize}
+
+\subsection{Definir al menos dos tipo rep}
+\begin{enumerate}[a)]
+\item Posibilidad 1:
+\begin{lstlisting}[style=cmas]
+struct ruta{
+	PuntoGeografico *punto ; 
+	unsigned num_puntos ;		
+\end{lstlisting}
+\setlength{\parskip}{-4mm}
+\item Posibilidad 2:
+\begin{lstlisting}[style=cmas]
+class Ruta{
+	private:
+		PuntoGeografico *punto ; 
+		unsigned num_puntos ;	
+\end{lstlisting}
+\end{enumerate}
+
+\subsection{Escoger uno de los tipo rep y para éste establecer la función de abstracción}
+Tras haber elegido la posibilidad 2, la \textbf{función de abstracción} se define como:\\
+\begin{center}
+	$ f_{A}(r) = $ $ " $r.punto[0], r.punto[1],..., r.punto[r.num\_puntos - 1]$ " $
+\end{center}
+Donde r es una instancia del objeto abstracto de tipo rep que sirve para representar el T.D.A. Ruta
+
+\subsection{Invariante de la representación}
+\begin{center}
+	$ (r.punto[i] \neq r.punto[j])\forall i,j $ $0 \leq i < j < r.num\_puntos $
+\end{center}
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	Problema 5
+%----------------------------------------------------------------------------------------
+\section{Dar una especificación para la función que permite derivar un polinomio. Suponiendo que
+	tenemos el TDA Polinomio, la cabecera de la función derivada sería asi:
+	void Derivar(const Polinomio \& p\_origen, Polinomio \& p\_derivada);}
+
+\begin{lstlisting}[style=cmas]
+/**
+* @brief Obtiene la derivada de un polinomio.
+* @param p_origen: polinomio del que se va a obtener la derivada. 
+* @param p_derivada: objeto Polinomio donde guarda la derivada. ES MODIFICADO
+*/	
+void Derivar(const Polinomio & p_origen, Polinomio & p_derivada);
+\end{lstlisting}
+
+\end{document}
